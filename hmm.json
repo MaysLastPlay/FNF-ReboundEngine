@@ -3,22 +3,22 @@
     {
       "name": "lime",
       "type": "haxelib",
-      "version": 8.2.2
+      "version": "8.2.2"
     },
     {
       "name": "openfl",
       "type": "haxelib",
-      "version": 9.4.1
+      "version": "9.4.1"
     },
     {
       "name": "flixel",
       "type": "haxelib",
-      "version": 6.0.0
+      "version": "6.0.0"
     },
     {
       "name": "flixel-addons",
       "type": "haxelib",
-      "version": 3.2.2
+      "version": "3.2.2"
     },
     {
       "name": "flixel-tools",
@@ -28,12 +28,12 @@
     {
       "name": "flixel-ui",
       "type": "haxelib",
-      "version": 1.5.1
+      "version": "1.5.1"
     },
     {
       "name": "hxvlc",
       "type": "haxelib",
-      "version": 2.0.2
+      "version": "2.0.2"
     },
     {
       "name": "hscript",
