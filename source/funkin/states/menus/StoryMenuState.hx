@@ -1,16 +1,10 @@
 package funkin.states.menus;
 
-import flixel.FlxG;
-import flixel.FlxSprite;
-import flixel.addons.transition.FlxTransitionableState;
+import funkin.backend.util.MathUtil;
 import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.group.FlxGroup;
 import flixel.math.FlxMath;
-import flixel.text.FlxText;
-import flixel.tweens.FlxTween;
-import flixel.util.FlxColor;
-import flixel.util.FlxTimer;
 import lime.net.curl.CURLCode;
 import funkin.backend.MenuItem;
 
@@ -206,7 +200,7 @@ class StoryMenuState extends MusicBeatState
 	override function update(elapsed:Float)
 	{
 		// scoreText.setFormat('VCR OSD Mono', 32);
-		lerpScore = CoolUtil.coolLerp(lerpScore, intendedScore, 0.5);
+		lerpScore = MathUtil.coolLerp(lerpScore, intendedScore, 0.5);
 
 		scoreText.text = "WEEK SCORE:" + Math.round(lerpScore);
 

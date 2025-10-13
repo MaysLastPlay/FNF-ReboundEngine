@@ -18,3 +18,6 @@
 - [Kawaisprite](https://twitter.com/kawaisprite) - Musician
 ## Game Building Instructions
 Go to [Building Instructions](https://github.com/Stefan2008Git/FNF-ReboundEngine/blob/main/BUILD-INSTRUCTIONS.md) and read everything what was in it.
+
+## Social
+- [Discord server](https://discord.gg/24HNXrzd7d)

@@ -1,12 +1,10 @@
 package funkin.states;
 
+import funkin.backend.util.MathUtil;
 import flixel.group.FlxSpriteGroup;
 import animate.FlxAnimate;
 import ui.PreferencesMenu;
 import flixel.FlxBasic;
-import flixel.FlxCamera;
-import flixel.FlxG;
-import flixel.FlxGame;
 import flixel.FlxObject;
 import flixel.FlxSprite;
 import flixel.FlxState;
@@ -16,7 +14,6 @@ import flixel.addons.effects.FlxTrail;
 import flixel.addons.effects.FlxTrailArea;
 import flixel.addons.effects.chainable.FlxEffectSprite;
 import flixel.addons.effects.chainable.FlxWaveEffect;
-import flixel.addons.transition.FlxTransitionableState;
 import flixel.graphics.atlas.FlxAtlas;
 import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.group.FlxGroup.FlxTypedGroup;
@@ -58,7 +55,7 @@ class PlayState extends MusicBeatState
 	public static var practiceMode:Bool = false;
 	public static var seenCutscene:Bool = false;
 
-	var halloweenLevel:Bool = false;
+	private var halloweenLevel:Bool = false;
 
 	private var vocals:FlxSound;
 	private var vocalsFinished = false;
@@ -96,8 +93,8 @@ class PlayState extends MusicBeatState
 
 	private var iconP1:HealthIcon;
 	private var iconP2:HealthIcon;
-	private var camHUD:FlxCamera;
 	private var camGame:FlxCamera;
+	private var camHUD:FlxCamera;
 	private var camOther:FlxCamera;
 
 	var dialogue:Array<String> = ['blah blah blah', 'coolswag'];
@@ -146,7 +143,7 @@ class PlayState extends MusicBeatState
 	var defaultCamZoom:Float = 1.05;
 
 	// how big to stretch the pixel art assets
-	public static var daPixelZoom:Float = 6;
+	public static final daPixelZoom:Float = 6;
 
 	var inCutscene:Bool = false;
 
@@ -1420,7 +1417,7 @@ class PlayState extends MusicBeatState
 
 	override public function update(elapsed:Float)
 	{
-		FlxG.camera.followLerp = CoolUtil.camLerpShit(0.04);
+		FlxG.camera.followLerp = MathUtil.cameraLerp(0.04);
 
 		if (startingSong)
 		{

@@ -1,5 +1,6 @@
 package;
 
+import funkin.backend.system.FNFGame;
 import flixel.FlxGame;
 import flixel.FlxState;
 import flixel.input.keyboard.FlxKey;
@@ -88,8 +89,7 @@ class Main extends Sprite
         }
 	    #end
 
-		var init:FlxGame = new FlxGame(game.width, game.height, Init, #if (flixel < "5.0.0") game.zoom, #end game.framerate, game.framerate, game.skipSplash, game.startFullscreen);
-		addChild(init);
+		addChild(new FNFGame(game.width, game.height, Init, #if (flixel < "5.0.0") game.zoom, #end game.framerate, game.framerate, game.skipSplash, game.startFullscreen));
 
 		fpsCounter = new FPSCounter(5, 3);
 		addChild(fpsCounter);

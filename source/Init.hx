@@ -1,10 +1,7 @@
 package;
 
-import flixel.FlxG;
 import flixel.FlxState;
-
 import lime.app.Application;
-
 import ui.PreferencesMenu; 
 
 class Init extends FlxState
@@ -16,7 +13,7 @@ class Init extends FlxState
         FlxG.fixedTimestep = false;
         FlxG.sound.muteKeys = [ZERO];
 
-        FlxG.save.bind('funkin', 'ninjamuffin99');
+        FlxG.save.bind('funkin', funkin.backend.Constants.SAVE_FILE);
 
 		PreferencesMenu.initPrefs();
 		PlayerSettings.init();

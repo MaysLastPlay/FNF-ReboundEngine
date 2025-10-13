@@ -1,4 +1,4 @@
-package funkin.backend.data;
+package funkin.backend.objects;
 
 import flixel.FlxG;
 import flixel.FlxSprite;

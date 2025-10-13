@@ -2,7 +2,7 @@
 <project>
 	<!-- _________________________ Game Settings _________________________ -->
 
-	<app title="Friday Night Funkin': Rebound Engine" file="ReboundEngine" packageName="com.stefan2008.reboundengine" package="com.stefan2008.reboundengine" main="Main" version="0.2.8" company="Rebound Team" />
+	<app title="Friday Night Funkin': Rebound Engine" file="ReboundEngine" packageName="com.reboundcrew.reboundengine" package="com.reboundcrew.reboundengine" main="Main" version="0.2.8" company="Rebound Team" />
 	
 	<!--The flixel preloader is not accurate in Chrome. You can use it regularly if you embed the swf into a html file
 		or you can set the actual size of your file manually at "FlxPreloaderBase-onUpdate-bytesTotal"-->
@@ -12,6 +12,13 @@
 	<!--Minimum without FLX_NO_GAMEPAD: 11.8, without FLX_NO_NATIVE_CURSOR: 11.2-->
 	<set name="SWF_VERSION" value="11.8" />
 
+	<!--Switch Export with Unique ApplicationID and Icon-->
+	<set name="APP_ID" value="0x0100f6c013bbc000" />
+	<meta build-number="331" />
+
+	<!-- Comment this out to disable support for Nape integration (flixel.addons.nape) (reduces compile times) !-->
+	<define name="NAPE_ENABLED" unless="STRIPPED_COMPILE" />
+	
 	<!-- ____________________________ Window Settings ___________________________ -->
 
 	<window width="1280" height="720" fps="60" background="#000000" hardware="true" vsync="false" allow-high-dpi="true"/>
@@ -108,13 +115,24 @@
 
 	<!-- _______________________________ Libraries ______________________________ -->
 
-	<haxelib name="flixel" />
-	<haxelib name="flixel-addons" />
+	<!-- KEEP BOTH OF THESE AS THERE ARE SOME PARTICULAR CASES! -->
+	<define name="disable-version-check" />
+	<haxedef name="disable-version-check" />
+
+	<haxelib name="flixel" /> <!-- Game engine -->
+	<haxelib name="flixel-addons" /> <!-- Additional utilities for Flixel -->
 	<haxelib name="hscript" if="HSCRIPT_ALLOWED"/>
-	<haxelib name="flixel-ui" />
-	<haxelib name="hxdiscord_rpc" if="DISCORD_ALLOWED"/>
+	<haxelib name="flixel-ui" /> <!-- UI framework -->
+	<haxelib name="hxdiscord_rpc" if="DISCORD_ALLOWED"/>  <!-- Discord RPC -->
 
 	<haxedev set='webgl' if="web" />
+
+	<!-- Disable Discord IO Thread -->
+	<haxedef name="DISCORD_DISABLE_IO_THREAD" if="hxdiscord_rpc" />
+	<haxedef name="NO_PRECOMPILED_HEADERS" if="linux" />
+
+	<define name="x86_BUILD" if="32bits" />
+	<haxelib name="nape-haxe4" if="NAPE_ENABLED" />
 
 	<!-- ______________________________ Haxedefines _____________________________ -->
 

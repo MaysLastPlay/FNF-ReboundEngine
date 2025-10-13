@@ -5,7 +5,7 @@ import lime.utils.Assets;
 
 using StringTools;
 
-class CoolUtil
+final class CoolUtil
 {
 	public static var difficultyArray:Array<String> = ['EASY', "NORMAL", "HARD"];
 
@@ -36,7 +36,7 @@ class CoolUtil
 		return dumbArray;
 	}
 
-	public static function camLerpShit(ratio:Float)
+	/* public static function camLerpShit(ratio:Float)
 	{
 		return FlxG.elapsed / (1 / 60) * ratio;
 	}
@@ -44,7 +44,7 @@ class CoolUtil
 	public static function coolLerp(a:Float, b:Float, ratio:Float)
 	{
 		return a + camLerpShit(ratio) * (b - a);
-	}
+	} */
 
 	inline public static function showPopUp(message:String, title:String #if sl_windows_api, ?icon:MessageBoxIcon, ?type:MessageBoxType #end, showScrollableMSG:Bool = false):Void
 	{
