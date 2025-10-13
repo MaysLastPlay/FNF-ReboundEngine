@@ -1,5 +1,6 @@
 package funkin.backend;
 
+import funkin.backend.util.MathUtil;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.graphics.frames.FlxAtlasFrames;
@@ -36,7 +37,7 @@ class MenuItem extends FlxSpriteGroup
 	override function update(elapsed:Float)
 	{
 		super.update(elapsed);
-		y = CoolUtil.coolLerp(y, (targetY * 120) + 480, 0.17);
+		y = MathUtil.coolLerp(y, (targetY * 120) + 480, 0.17);
 
 		if (isFlashing)
 			flashingInt += 1;

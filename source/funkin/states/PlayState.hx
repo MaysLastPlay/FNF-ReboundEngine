@@ -1,5 +1,6 @@
 package funkin.states;
 
+import funkin.backend.util.MathUtil;
 import flixel.group.FlxSpriteGroup;
 import animate.FlxAnimate;
 import ui.PreferencesMenu;
@@ -54,7 +55,7 @@ class PlayState extends MusicBeatState
 	public static var practiceMode:Bool = false;
 	public static var seenCutscene:Bool = false;
 
-	var halloweenLevel:Bool = false;
+	private var halloweenLevel:Bool = false;
 
 	private var vocals:FlxSound;
 	private var vocalsFinished = false;
@@ -1416,7 +1417,7 @@ class PlayState extends MusicBeatState
 
 	override public function update(elapsed:Float)
 	{
-		FlxG.camera.followLerp = CoolUtil.camLerpShit(0.04);
+		FlxG.camera.followLerp = MathUtil.cameraLerp(0.04);
 
 		if (startingSong)
 		{

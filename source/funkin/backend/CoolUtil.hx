@@ -36,7 +36,7 @@ final class CoolUtil
 		return dumbArray;
 	}
 
-	public static function camLerpShit(ratio:Float)
+	/* public static function camLerpShit(ratio:Float)
 	{
 		return FlxG.elapsed / (1 / 60) * ratio;
 	}
@@ -44,7 +44,7 @@ final class CoolUtil
 	public static function coolLerp(a:Float, b:Float, ratio:Float)
 	{
 		return a + camLerpShit(ratio) * (b - a);
-	}
+	} */
 
 	inline public static function showPopUp(message:String, title:String #if sl_windows_api, ?icon:MessageBoxIcon, ?type:MessageBoxType #end, showScrollableMSG:Bool = false):Void
 	{

@@ -35,6 +35,7 @@ import funkin.backend.data.shaders.*;
 import funkin.backend.data.stages.*;
 import funkin.backend.objects.*;
 import funkin.backend.framerate.*;
+import funkin.backend.util.*;
 
 // States
 import funkin.states.*;

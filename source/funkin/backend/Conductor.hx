@@ -1,10 +1,11 @@
 package funkin.backend;
 
-typedef BPMChangeEvent =
+@:structInit
+class BPMChangeEvent
 {
-	var stepTime:Int;
-	var songTime:Float;
-	var bpm:Float;
+	public var stepTime:Int;
+	public var songTime:Float;
+	public var bpm:Float;
 }
 
 class Conductor

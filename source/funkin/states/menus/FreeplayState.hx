@@ -1,5 +1,6 @@
 package funkin.states.menus;
 
+import funkin.backend.util.MathUtil;
 import flash.text.TextField;
 import flixel.FlxG;
 import flixel.FlxSprite;
@@ -155,7 +156,7 @@ class FreeplayState extends MusicBeatState
 			FlxG.sound.music.volume += 0.5 * FlxG.elapsed;
 		}
 
-		lerpScore = CoolUtil.coolLerp(lerpScore, intendedScore, 0.4);
+		lerpScore = MathUtil.coolLerp(lerpScore, intendedScore, 0.4);
 		bg.color = FlxColor.interpolate(bg.color, coolColors[songs[curSelected].week % coolColors.length], CoolUtil.camLerpShit(0.045));
 
 		scoreText.text = "PERSONAL BEST:" + Math.round(lerpScore);
