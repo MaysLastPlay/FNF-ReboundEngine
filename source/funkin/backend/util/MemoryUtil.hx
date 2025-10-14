@@ -236,7 +236,7 @@ class MemoryUtil
 		#end
 	}
 
-	public static function getAvailableSystemMemory():Float
+	/*public static function getAvailableSystemMemory():Float
 	{
 		#if windows
 		return WindowsMemoryAPI.getAvailableSystemMemory();
@@ -273,7 +273,7 @@ class MemoryUtil
 		#else
 		return -1;
 		#end
-	}
+	}*/
 }
 
 // С++ MY BELOVED <3
