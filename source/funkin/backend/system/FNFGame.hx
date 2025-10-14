@@ -1,8 +1,8 @@
 package funkin.backend.system;
 
+import funkin.system.ui.FunkinSoundTray;
 import flixel.FlxBasic;
 import flixel.FlxGame;
-
 import flixel.util.typeLimit.NextState;
 
 #if CRASH_HANDLER
