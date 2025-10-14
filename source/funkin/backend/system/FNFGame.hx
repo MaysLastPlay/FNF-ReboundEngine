@@ -29,7 +29,7 @@ class FNFGame extends FlxGame
 		// create() in there, which gets called when it's added to stage
 		// which is why it needs to be added before addChild(game) here
 		@:privateAccess
-    	_customSoundTray = funkin.system.ui.FunkinSoundTray;
+    	_customSoundTray = funkin.backend.system.ui.FunkinSoundTray;
 	}
 
 	override function update():Void
