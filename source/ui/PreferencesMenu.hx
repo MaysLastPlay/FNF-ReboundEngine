@@ -120,7 +120,7 @@ class PreferencesMenu extends Page
 	override function update(elapsed:Float)
 	{
 		super.update(elapsed);
-		menuCamera.followLerp = CoolUtil.camLerpShit(0.05);
+		// menuCamera.followLerp = CoolUtil.camLerpShit(0.05);
 		items.forEach(function(item:MenuItem)
 		{
 			if (item == items.members[items.selectedIndex])
