@@ -2,7 +2,6 @@ package funkin.backend.system;
 
 import flixel.FlxBasic;
 import flixel.FlxGame;
-import backend.data.MusicBeatState;
 
 import flixel.util.typeLimit.NextState;
 
@@ -37,11 +36,7 @@ class FNFGame extends FlxGame
 	{
 		super.update();
 
-		if (FlxG.keys.justPressed.F5)
-			if(FlxG.keys.pressed.SHIFT)
-				FlxG.switchState(new MainMenuState());
-			else
-				MusicBeatState.resetState();
+		if (FlxG.keys.justPressed.F5) FlxG.resetState();
 	}
 
 	var skipNextTickUpdate:Bool = false;
