@@ -41,7 +41,7 @@ class Init extends FlxState
 		});
 		#end
 
-        FlxG.switchState(() -> new funkin.states.menus.TitleState());
+        FlxG.switchState(() -> new funkin.states.secret.ValveIntroState.WarningState());
 
         super.create();
     }
