@@ -3,7 +3,7 @@
 <img width="900" height="494" alt="FNF-ReboundEngine" src="https://github.com/user-attachments/assets/c94a7273-84ec-438f-8474-350d135794b7" />
 <br/>
   <h1 align="center">FNF': Rebound Engine</h1>
-  <p align="center">Rebound Engine is a Friday Night Funkin' rewrite and successor of SB Engine by Stefan2008 and Play Engine by MaysLastPlay and uses Week 7 source code and it is seperate, adding new cool features to the game. </p>
+  <p align="center">Rebound Engine is a Friday Night Funkin' rewrite and successor of Play Engine and uses Week 7 source code and it is seperate, adding new cool features to the game. </p>
 </div>
 <br />
 
